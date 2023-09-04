@@ -28,3 +28,6 @@ A python script that reminds of the weather every day,in this project i have use
     - run() : Run the job and immediately reschedule it. 
     Returns: The return value returned by the job_func
     - to(latest) : Schedule the job to run at an irregular (randomized) interval. For example, every(A).to(B).seconds executes the job function every N seconds such that A <= N <= B.
+
+## Data source
+Open-Meteo weather forecast APIs use weather models from multiple national weather providers.
