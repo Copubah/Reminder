@@ -7,7 +7,7 @@ A python script that reminds of the weather every day,in this project i have use
 - Use $ pip install schedule   to install it
 
 
-schedule.Scheduler class
+## Schedule.Scheduler class
 
     - schedule.every(interval=1) : Calls every on the default scheduler instance. Schedule a new periodic job.
     - schedule.run_pending() : Calls run_pending on the default scheduler instance. Run all jobs that are scheduled to run.
