@@ -15,3 +15,16 @@ A python script that reminds of the weather every day,in this project i have use
     - schedule.idle_seconds() : Calls idle_seconds on the default scheduler instance.
     - schedule.next_run() : Calls next_run on the default scheduler instance. Datetime when the next job should run.
     - schedule.cancel_job(job) : Calls cancel_job on the default scheduler instance. Delete a scheduled job.
+
+   ## Basic methods for Schedule.job
+ 
+
+    - at(time_str) : Schedule the job every day at a specific time. Calling this is only valid for jobs scheduled to run every N day(s).
+    Parameters: time_str – A string in XX:YY format. 
+    Returns: The invoked job instance
+    - do(job_func, *args, **kwargs) : Specifies the job_func that should be called every time the job runs. Any additional arguments are passed on to job_func when the job runs.
+    Parameters: job_func – The function to be scheduled 
+    Returns: The invoked job instance
+    - run() : Run the job and immediately reschedule it. 
+    Returns: The return value returned by the job_func
+    - to(latest) : Schedule the job to run at an irregular (randomized) interval. For example, every(A).to(B).seconds executes the job function every N seconds such that A <= N <= B.
